@@ -1,0 +1,9 @@
+import pandas as pd
+import os
+pwd = os.getcwd()
+
+dataset = pd.read_excel(pwd + "\\frasierreg.xlsx")
+convertdata=dataset.stack()
+
+
+convertdata.to_excel("newfrasierreg.xlsx")
